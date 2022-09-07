@@ -1,0 +1,17 @@
+
+  
+    <div *ngIf="product">
+      <mat-card>     
+        <mat-card-title>Product Details</mat-card-title>
+        <mat-card-title>{{ product.name }}</mat-card-title>               
+      <h4 class="mat-headline">{{ product.price | currency }}</h4>
+      <p>{{ product.description }}</p>
+    
+      <button   mat-raised-button  (click)="addToCart(product)">Add To Cart</button>
+      <pre></pre>
+      <button mat-raised-button [routerLink]="'/'">Back To List</button>
+    </mat-card>
+    </div>    
+    
+  
+

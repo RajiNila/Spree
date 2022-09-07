@@ -1,0 +1,28 @@
+span{
+    padding: 1rem;
+    color:dimgray;  
+    margin-top: auto;   
+}
+.search{   
+   width: 400px;
+   height: 30px;
+   padding: 10px;
+   border:none;
+   font-size: small;
+   font-family:'Courier New', Courier, monospace;
+   margin-bottom: 1px;
+}
+.sicon{
+    margin-bottom: -9px;
+    margin-left: -24px;
+}
+.space{
+    flex: 1 1 auto;
+}
+mat-toolbar-row{ 
+    height:100px;
+    color:dimgray;
+}
+.cbtn{
+    margin-bottom: -20px;
+}

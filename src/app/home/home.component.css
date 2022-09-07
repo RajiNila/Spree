@@ -1,0 +1,21 @@
+span{
+    padding: 1rem;
+    color:dimgray;  
+    margin-top: auto;   
+}
+.space{
+    flex: 1 1 auto;
+}
+mat-toolbar-row{ 
+    height:100px;
+    }
+img{
+    height: 500px; 
+    width: 200px;
+    text-align:center;
+    margin:0; 
+    padding:0;
+}
+
+
+

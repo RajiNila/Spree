@@ -1,0 +1,47 @@
+<mat-toolbar fxLayout="column wrap " >
+    <mat-toolbar-row>
+        <span >
+          <a routerLink="/home"> 
+            <img  [src]="imageSrc" [alt]="imageAlt" /> 
+          </a>          
+        </span>
+        <div >
+            <form class="mat-body-2">             
+            <input class="search" type="search" placeholder="Find good furniture for me" name= "search" > 
+            <mat-button matSuffix mat-button><mat-icon class="sicon">search</mat-icon></mat-button>
+        </form>
+        </div>
+        <div class="space"></div>
+        <span>
+            
+            <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+                <mat-expansion-panel-header>
+                    <mat-panel-title  style="font-size:15px;">
+                        24/7 help             
+                    </mat-panel-title>                
+                </mat-expansion-panel-header>
+                <p>Get help from our experts 24/7</p>
+                <p style="color:red; font-size:30px;">888-888-xxx</p>
+                <mat-action-row>
+                    <button mat-button>Contact Us</button>
+                </mat-action-row>
+            
+            </mat-expansion-panel>
+        
+        </span>
+        <span>
+            <button mat-button [matMenuTriggerFor]="lists">Login & SignUp<mat-icon>expand_more</mat-icon></button>
+            <mat-menu #lists="matMenu">
+                <button mat-menu-item routerLink="/home">Home</button>
+                <button mat-menu-item routerLink="/login">Login</button>
+                <button mat-menu-item routerLink="/signup">Signup</button>
+            </mat-menu>
+            
+        </span>
+        <button class="cbtn" mat-stroked-button routerLink="/cart">
+            <mat-icon>shopping_cart</mat-icon>Cart 
+            ({{itemsCount()}})
+        </button>       
+       </mat-toolbar-row>
+    </mat-toolbar>
+    

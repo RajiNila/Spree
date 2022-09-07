@@ -1,0 +1,42 @@
+
+  .login{
+    
+    height: 550px;
+  }
+  .box {
+    position: relative;    
+    padding: 60px 50px 40px 50px;
+    width: 400px;
+    height: 450px;
+    background: rgb(241, 234, 234);
+    border-radius: 10px;    
+    max-width:500px;    
+    margin-top: 50px;    
+  }  
+  .input{
+    width: 100%;
+  }
+ 
+  mat-card-header {
+    text-align: center;
+    width: 100%;
+    display: block;
+    font-size: 30px;
+  }
+ .mat-card {
+    padding: 40px 70px 50px;
+  }
+  .mat-stroked-button {
+    border: 1px solid red;    
+    background: #FFF7FA;
+    width: 50%;  
+    margin-left: 25%;
+    margin-bottom: 10%;
+    padding: 1px;
+  }
+  a{
+    float:right;
+    color:rgb(202, 155, 0)
+  }
+  
+  

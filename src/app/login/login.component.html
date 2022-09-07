@@ -1,0 +1,35 @@
+
+
+    <div class="login" fxLayout="column" fxLayoutAlign="center center">
+      <mat-card class="box">
+        <mat-card-header>
+          <mat-card-title>Log in</mat-card-title>
+        </mat-card-header>
+    
+        <div style="text-align: center;">
+          <p>Easily Using</p>
+          <cool-google-button color="light" (click)="loginwithgoogle()">GOOGLE</cool-google-button>
+        </div><br>
+        <p style="text-align: center;">-Or Using Email-</p>
+    
+        <form [formGroup]="formdata" (ngSubmit)="onSubmit()" >    
+          <mat-card-content>
+            <mat-form-field class="input">
+              <input matInput type="text" name="email" placeholder="Email" formControlName="email">
+              <mat-error *ngIf="f['email'].getError('required')!=null">Email id is Required!</mat-error>
+            <mat-error *ngIf="f['email'].getError('pattern')!=null">Please enter a valid Email!</mat-error>
+            </mat-form-field>
+    
+            <mat-form-field class="input">
+              <input matInput type="password" name="password" placeholder="password" formControlName="password">
+              <mat-error *ngIf="f['password'].getError('required')!=null">Password id is Required!</mat-error>
+              <mat-error *ngIf="f['password'].getError('minlength')!=null">Please minimum 8 Cherecters!
+              </mat-error>
+    
+            </mat-form-field>
+          </mat-card-content>
+          <button mat-stroked-button color="accent" [disabled]="formdata.invalid" routerLink="/home">Log in</button><br />
+          <p><a href="">Forgot password?</a></p>
+        </form>
+      </mat-card>
+    </div>

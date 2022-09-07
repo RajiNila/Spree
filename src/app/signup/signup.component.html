@@ -1,0 +1,54 @@
+  <div class="register" fxLayout="row" fxLayoutAlign="center center">   
+    <mat-card class="box">      
+      <mat-card-header>
+        <mat-card-title>SignUp to Angular Spree</mat-card-title>
+      </mat-card-header>
+      
+       <form [formGroup]="formdata" (ngSubmit)="onSubmit()">
+     
+        <mat-card-content>
+          <mat-form-field class="input">
+            <input matInput type="text"  name="email" placeholder="Email" formControlName="email" >
+            <mat-error *ngIf="f['email'].getError('required')!=null">Email id is Required!</mat-error>
+            <mat-error *ngIf="f['email'].getError('pattern')!=null">Please enter a valid Email!</mat-error>
+            
+            
+          </mat-form-field>
+          <mat-form-field class="input">
+            <input matInput type="password" name="password" placeholder="Password" formControlName="password" >
+           <mat-error *ngIf="f['password'].getError('required')!=null">Password id is Required!</mat-error>
+           <mat-error *ngIf="f['password'].getError('minlength')!=null">Please minimum 8 Cherecters!</mat-error>       
+                      
+          </mat-form-field>
+          <mat-form-field class="input">
+            <input matInput type="password" name="confirmPassword" placeholder="Confirm Password" formControlName="confirmPassword">  
+            <mat-error *ngIf="f['confirmPassword'].getError('required')!=null">Confirm Password id is Required!</mat-error> 
+            <mat-error *ngIf="f['confirmPassword'].getError('mustMatch')!=null">Confirm Password not Matching!</mat-error> 
+
+            
+            
+            
+          </mat-form-field>
+          <mat-form-field class="input">
+            <input matInput type="number" placeholder="Mobile Number (For Order Status Updates)" formControlName="mobile"> 
+            <mat-error *ngIf="f['mobile'].getError('required')!=null">Mobile Number is Required!</mat-error>
+            <mat-error *ngIf="f['mobile'].getError('minlength')!=null">Mobile Number must be mimimum 8 numbers!</mat-error>
+                     
+          </mat-form-field>
+          <mat-radio-group aria-label="I'm a" formControlName="radio">
+            <mat-radio-button value="1">Male</mat-radio-button>
+            <mat-radio-button value="2">Female</mat-radio-button>
+          </mat-radio-group>
+        </mat-card-content>
+        <button mat-stroked-button color="accent" [disabled]="formdata.invalid" routerLink="/login">Register</button><br/>
+        <p>Already have an account?
+            <a routerLink="/login" style=" color:rgb(202, 155, 0)" >Login</a> 
+        </p>
+      </form>    
+    </mat-card>  
+  </div>
+
+
+
+
+

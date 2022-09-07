@@ -1,0 +1,12 @@
+mat-card{
+    background-color: burlywood;
+    padding: 10px;
+    text-align:center;   
+    height:500px;      
+}
+mat-card-title{  
+    padding: 20px;
+    
+}
+
+

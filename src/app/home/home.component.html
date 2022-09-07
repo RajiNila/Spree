@@ -1,0 +1,93 @@
+<!-- This is for 2nd Row -->
+<mat-toolbar>
+  <mat-toolbar-row >
+    <span style="font-size:15px;">
+        
+          <button mat-button [matMenuTriggerFor]="lists" >Shop By Gold Jewellary<mat-icon>expand_more</mat-icon></button>
+          <mat-menu #lists="matMenu">
+            <button mat-menu-item [matMenuTriggerFor]="necklaces">Neclaces</button>
+            <button mat-menu-item [matMenuTriggerFor]="earrings">Earrings</button>
+            <button mat-menu-item [matMenuTriggerFor]="rings">Rings</button>
+            <button mat-menu-item [matMenuTriggerFor]="bangles">Bangles</button>
+          </mat-menu>
+<mat-menu class="items" #necklaces="matMenu">
+
+  <div *ngFor="let product of necs">
+    <h3>Popular Brands</h3>
+    <p *ngIf="product.description">
+      <img style="float:right; height:100px; width:100px" src="{{product.imgsrc}}" alt="Necklaces" />
+      Description: {{ product.description }}
+    </p>
+    <button mat-stroked-button [title]="product.name + 'deatils'" [routerLink]="['/products', product.id]">
+      {{ product.name }}
+    </button>
+  </div>
+</mat-menu>
+
+<mat-menu #earrings="matMenu">
+  <div *ngFor="let product of Earrings">
+    <h3>Popular Brands</h3>
+    <p *ngIf="product.description">
+      <img style="float:right; height:100px; width:100px" src="{{product.imgsrc}}" alt="Earrings" />
+      Description: {{ product.description }}
+    </p>
+    <button mat-stroked-button [title]="product.name" [routerLink]="['/products', product.id]">
+      {{ product.name }}
+    </button>
+  </div>
+</mat-menu>
+
+<mat-menu #rings="matMenu">
+  <div *ngFor="let product of Rings">
+    <h3>Popular Brands</h3>
+    <p *ngIf="product.description">
+      <img style="float:right; height:100px; width:100px" src="{{product.imgsrc}}" alt="Rings" />
+      Description: {{ product.description }}
+    </p>
+    <button mat-stroked-button [title]="product.name" [routerLink]="['/products', product.id]">
+      {{ product.name }}
+    </button>
+  </div>
+</mat-menu>
+
+<mat-menu #bangles="matMenu">
+  <div *ngFor="let product of Bangles">
+    <h3>Popular Brands</h3>
+    <p *ngIf="product.description">
+      <img style="float:right; height:100px; width:100px" src="{{product.imgsrc}}" alt="Bangles" />
+      Description: {{ product.description }}
+    </p>
+    <button mat-stroked-button [title]="product.name" [routerLink]="['/products', product.id]">
+      {{ product.name }}
+    </button>
+  </div>
+</mat-menu>
+</span>
+
+<span style="font-size:15px;">
+  <button mat-button [disabled]="true">Shop By Diamond Jewellary<mat-icon>expand_more</mat-icon></button>
+</span>
+
+    <div class="space"></div>
+    <span>
+      Free 1-2 Day Shipping over $50”
+      <mat-icon>local_shipping</mat-icon>
+    </span>     
+  </mat-toolbar-row>
+</mat-toolbar>
+
+
+    <!-- This is for Image slider -->
+ 
+    <span>     
+  <owl-carousel-o [options]="customOptions">
+    <ng-template carouselSlide><img  src="../../assets/gold.jpg" alt="imageAlt" /></ng-template>  
+    <ng-template carouselSlide><img  src="../../assets/necklace.jpg" alt="imageAlt" /></ng-template>  
+    <ng-template carouselSlide><img  src="../../assets/fortune.jpg" alt="imageAlt" /></ng-template>  
+    <ng-template carouselSlide><img  src="../../assets/bangles.jpg" alt="imageAlt" /></ng-template>  
+    <ng-template carouselSlide><img  src="../../assets/earrings.jpg" alt="imageAlt" /></ng-template>  
+  </owl-carousel-o>
+  
+    </span> 
+         
+
